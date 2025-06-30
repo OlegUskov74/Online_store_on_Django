@@ -1,0 +1,65 @@
+[
+{
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Test name 1",
+        "description": "111111111111111"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Test name 2",
+        "description": "222222222222222"
+    }
+},
+{
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+        "name": "Test name 3",
+        "description": "333333333333333"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 1,
+    "fields": {
+        "name": "Test name 1",
+        "description": "",
+        "image": "",
+        "category": 1,
+        "price": "9721.21",
+        "created_at": "2025-06-28",
+        "updated_at": "2025-06-29"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Test name 2",
+        "description": "",
+        "image": "",
+        "category": 2,
+        "price": "2000.00",
+        "created_at": "2025-06-28",
+        "updated_at": "2025-06-28"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Test name 3",
+        "description": "",
+        "image": "",
+        "category": 3,
+        "price": "4000.00",
+        "created_at": "2025-06-28",
+        "updated_at": "2025-06-28"
+    }
+}
+]
