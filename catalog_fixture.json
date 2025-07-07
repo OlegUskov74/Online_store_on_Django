@@ -3,63 +3,141 @@
     "model": "catalog.category",
     "pk": 1,
     "fields": {
-        "name": "Test name 1",
-        "description": "111111111111111"
+        "name": "Фрукты",
+        "description": "Свежие фрукты к Вашему столу"
     }
 },
 {
     "model": "catalog.category",
     "pk": 2,
     "fields": {
-        "name": "Test name 2",
-        "description": "222222222222222"
+        "name": "Овощи",
+        "description": "Свежие овощи всегда в наличии"
     }
 },
 {
     "model": "catalog.category",
     "pk": 3,
     "fields": {
-        "name": "Test name 3",
-        "description": "333333333333333"
+        "name": "Ягоды",
+        "description": "Самые сочные ягоды"
     }
 },
 {
     "model": "catalog.product",
     "pk": 1,
     "fields": {
-        "name": "Test name 1",
-        "description": "",
-        "image": "",
+        "name": "Бананы",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/бананы1.jpg",
         "category": 1,
-        "price": "9721.21",
+        "price": "100.00",
         "created_at": "2025-06-28",
-        "updated_at": "2025-06-29"
+        "updated_at": "2025-07-02"
     }
 },
 {
     "model": "catalog.product",
     "pk": 2,
     "fields": {
-        "name": "Test name 2",
-        "description": "",
-        "image": "",
-        "category": 2,
-        "price": "2000.00",
+        "name": "Яблоки",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/яблоки1.jpg",
+        "category": 1,
+        "price": "100.00",
         "created_at": "2025-06-28",
-        "updated_at": "2025-06-28"
+        "updated_at": "2025-07-02"
     }
 },
 {
     "model": "catalog.product",
     "pk": 3,
     "fields": {
-        "name": "Test name 3",
-        "description": "",
-        "image": "",
-        "category": 3,
-        "price": "4000.00",
+        "name": "Груши",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/груши1.jpg",
+        "category": 1,
+        "price": "100.00",
         "created_at": "2025-06-28",
-        "updated_at": "2025-06-28"
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Помидоры",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/помидор1.jpg",
+        "category": 2,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Огурцы",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/огурец1.jpg",
+        "category": 2,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+        "name": "Картофель",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/картофель1.jpg",
+        "category": 2,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+        "name": "Виноград",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/виноград1.jpg",
+        "category": 3,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+        "name": "Клубника",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/клубника1.jpg",
+        "category": 3,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+        "name": "Черешня",
+        "description": "Всегда только лучшие продукты для Вас!",
+        "photo": "product/photo/черешня1.jpg",
+        "category": 3,
+        "price": "100.00",
+        "created_at": "2025-07-02",
+        "updated_at": "2025-07-02"
     }
 }
 ]
