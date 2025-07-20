@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load my_tags %}
 {% block title %}Карточка товара{% endblock %}
-
+{% load static %}
 {% block content %}
 {% include 'header.html' %}
 
@@ -13,9 +13,13 @@
             <div class="card-header">
                 <h3 class="my-0 font-weight-normal"> {{ product.name}}</h3>
                 <div class="card-body">
+
                     {% if product.photo %}
                     <img src="{{ product.photo | media_filter }}" style="width: 550px">
+                     {% else %}
+                    <img src="{% static 'images/no_photo.jpg' %}" alt=" . . . " class="img-fluid"/>
                     {% endif %}
+
                     <h4 class="card-title pricing-card-title">Цена: {{product.price}} р.</h4>
                     <h6> Описание: {{ product.description}}.</h6>
                     <h6> Добавлен: {{ product.created_at | date:"d M Y" }}.</h6>
@@ -23,7 +27,11 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <a class="btn btn-lg btn-block btn-outline-primary" href="/product_catalog">Назад</a>
+                            <a class="btn btn-lg btn-block btn-outline-primary" href="/product_update/{{product.pk}}">Редактировать</a>
                             <a class="btn btn-lg btn-block btn-outline-primary" href="/pay">Оплатить</a>
+                        </div>
+                        <div class="btn-group">
+                            <a class="p-1 btn btn-lg btn-block btn-outline-danger fixed-size-btn" href="/product_delete/{{product.pk}}">Удалить</a>
                         </div>
                     </div>
                 </div>

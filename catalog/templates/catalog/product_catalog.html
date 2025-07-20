@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load my_tags %}
 {% block title %}Каталог товара{% endblock %}
-
+{% load static %}
 {% block content %}
 {% include 'header.html' %}
 
@@ -11,7 +11,13 @@
             {% for prod in products %}
             <div class="col">
                 <div class="card shadow-sm">
-                    <img src="{{prod.photo | media_filter}}">
+
+                    {% if prod.photo %}
+                    <img src="{{ prod.photo | media_filter }}" style="width: 350px">
+                     {% else %}
+                    <img src="{% static 'images/no_photo.jpg' %}" alt=" . . . " class="img-fluid"/>
+                    {% endif %}
+
                     <div class="card-body">
                         <p class="card-text">{{ prod.name }}</p>
                         <p class="card-text">{{ prod.description }}</p>
@@ -26,5 +32,9 @@
             {% endfor %}
         </div>
     </div>
+</div>
+<div class="container mb-3">
+    <h4>Добавьте свой продукт </h4>
+    <a class="btn btn-lg btn-block btn-outline-info" href="/product_create">Добавить продукт</a>
 </div>
 {% endblock %}

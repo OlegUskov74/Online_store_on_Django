@@ -28,7 +28,7 @@ class Blog(models.Model):
     )
     sign_publication = models.BooleanField(default=False, verbose_name="признак публикации")
     watch_count = models.PositiveIntegerField(
-        default=0, verbose_name="количество просмотров"
+        default=0, editable=False, verbose_name="количество просмотров"
     )
 
     def __str__(self):

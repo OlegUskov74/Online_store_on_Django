@@ -34,6 +34,8 @@ DEBUG = True if os.getenv('DEBUG') == 'True' else False
 
 ALLOWED_HOSTS = []
 
+FORBIDDEN_WORDS = ["казино", "криптовалюта", "крипта", "биржа", "дешево", "бесплатно", "обман", "полиция", "радар"]
+ALLOWED_EXTENSIONS = [".jpeg", ".jpg", ".png"]
 
 # Application definition
 
