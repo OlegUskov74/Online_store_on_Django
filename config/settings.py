@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     "catalog",
     "blog",
+    "users",
 ]
 
 MIDDLEWARE = [
@@ -67,7 +68,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [os.path.join(BASE_DIR, 'common_templates'), os.path.join(BASE_DIR, 'blog/templates/blog'),
-                 os.path.join(BASE_DIR, 'catalog/templates/catalog')],
+                 os.path.join(BASE_DIR, 'catalog/templates/catalog'), os.path.join(BASE_DIR, 'users/templates/users')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -141,3 +142,5 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'users.CustomUser'
