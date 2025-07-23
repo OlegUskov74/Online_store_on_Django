@@ -9,7 +9,7 @@ class  CustomUser(AbstractUser):
     avatar = models.ImageField(upload_to="users/avatars",null=True, blank=True,verbose_name="Добавьте аватар")
     phone_num = models.CharField(max_length=15, null=True, blank=True, verbose_name="Ваш номер телефона")
     country = models.CharField(max_length=100, null=True, blank=True, verbose_name="Страна")
-    token = models.CharField(max_length=100, null=True, blank=True, editable=False)
+    token = models.CharField(max_length=100, null=True, blank=True, verbose_name="Token")
 
 
     USERNAME_FIELD = "email"
