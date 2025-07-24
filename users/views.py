@@ -33,28 +33,7 @@ class RegisterView(CreateView):
             from_email=EMAIL_HOST_USER,
             recipient_list=[user.email]
         )
-
         return super().form_valid(form)
-
-
-
-class UpdateUserView(LoginRequiredMixin, UpdateView):
-    """ Редактирование данных зарегистрированного пользователя. """
-    model = CustomUser
-    form_class = CustomUserUpdateForm
-    template_name = 'update_user.html'
-    success_url = reverse_lazy('catalog:main')
-
-    def get_object(self):
-        return self.request.user
-
-
-class DeleteUserView(DeleteView):
-    """ Удаление информации о пользователе. """
-    model = CustomUser
-    form_class = CustomUserCreationForm
-    template_name = 'delete_user.html'
-    success_url = reverse_lazy('main')
 
 
 def valid_user_from_email(requeast, token):
@@ -65,3 +44,14 @@ def valid_user_from_email(requeast, token):
         user.save()
         return redirect('users:login')
     return PermissionDenied
+
+
+class UpdateUserView(LoginRequiredMixin, UpdateView):
+    """ Редактирование данных зарегистрированного пользователя. """
+    model = CustomUser
+    form_class = CustomUserUpdateForm
+    template_name = 'update_user.html'
+    success_url = reverse_lazy('catalog:home')
+
+    def get_object(self):
+        return self.request.user

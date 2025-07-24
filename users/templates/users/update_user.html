@@ -8,7 +8,7 @@
     <div class="col-12">
         <div class="card mb-4 box-shadow">
             <div class="card-header">
-                <h2 class="my-0 font-weight-normal">Редактирование профиля</h2>
+            <h2 class="my-0 font-weight-normal">Редактирование профиля - {{user.username}}</h2>
             </div>
             <div class="container  text-center">
 
@@ -16,7 +16,7 @@
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="p-2 btn btn-outline-success fixed-size-btn" >Сохранить</button>
-                    <a href="/" class="p-2 btn btn-lg btn-block btn-outline-info">Отмена</a>
+                    <a href="{% url 'catalog:home' %}" class="p-2 btn btn-lg btn-block btn-outline-info">Отмена</a>
                 </form>
 
             </div>
